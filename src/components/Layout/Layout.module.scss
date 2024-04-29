@@ -1,0 +1,14 @@
+@import "@/styles/base-imports";
+
+.container {
+  outline: 1px solid red;
+  min-height: 100dvh;
+}
+
+.mainContent {
+  padding: 0;
+
+  @media print {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,93 @@
+@import '@/styles/base-imports';
+
+.container {
+  @media print {
+    margin-top: -100px;
+    margin-bottom: 0;
+  }
+}
+
+.chartFigure {
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+}
+
+.graphic {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @media print {
+    gap: 15px;
+  }
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1rem;
+  align-items: center;
+
+  @include desktop {
+    grid-template-columns: 2fr 10fr;
+    gap: 2rem;
+  }
+
+  &:hover .block:not(:hover) {
+    opacity: 0.5;
+  }
+
+  h6 {
+    margin: 0;
+  }
+
+  @media print {
+    row-gap: 5px;
+  }
+}
+
+.legend {
+  display: flex;
+  column-gap: 2rem;
+  row-gap: 0.5rem;
+
+  margin-bottom: 2rem;
+
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media print {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  @include desktop {
+    // gap: 2rem;
+    // flex-direction: row;
+    // flex-wrap: nowrap;
+    // overflow-x: auto;
+    // padding-bottom: 2rem;
+  }
+
+  li {
+    --bg: $offwhite; // Fallback. Will be provided in the component
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    font-size: 0.8rem;
+    flex-basis: calc(50% - 1rem);
+
+    &::before {
+      content: "";
+      display: block;
+      width: 15px;
+      height: 15px;
+      background-color: var(--bg);
+      flex-shrink: 0;
+    }
+  }
+}

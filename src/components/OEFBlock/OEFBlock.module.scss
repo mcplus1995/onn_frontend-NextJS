@@ -1,0 +1,47 @@
+@import "@/styles/base-imports";
+
+.bg {
+    background-color: darken($primary, 0%);
+    padding: 4em 2em;
+    color: white;
+}
+
+.logo {
+    border: 4px solid $secondary;
+    border-right: 0;
+    padding: 2em 1em 2em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: grid;
+    place-content: center;
+    position: relative;
+
+
+
+    @include touch {
+        border-bottom: 0;
+    }
+}
+
+.right {
+    border-bottom: 4px solid $secondary;
+
+    .text {
+        font-size: 1.2em;
+    }
+
+    @include touch {
+        padding: 1.5em 2.25em 3.25em 2.25em;
+        border-left: 4px solid $secondary;
+
+        .text {
+            font-size: 1.25em;
+        }
+    }
+
+    @include desktop {
+        padding: 1.5em 6em 3.25em 8.5em;
+    }
+}

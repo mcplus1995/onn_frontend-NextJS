@@ -1,0 +1,166 @@
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $family-secondary;
+  font-weight: 700;
+  color: $headline;
+
+  +p {
+    margin-top: 0.5rem;
+  }
+
+  @media print {
+    margin-top: 24pt;
+    margin-bottom: 12pt;
+  }
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  color: $primary;
+}
+
+h2 {
+  margin-top: 1.5rem;
+  font-size: 2.75rem;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  margin-top: 1.75rem;
+  font-size: 2.25rem;
+  margin-bottom: 0.75rem;
+}
+
+h4 {
+  margin-top: 1.25rem;
+  font-size: 1.75rem;
+}
+
+h5 {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+h6 {
+  margin-top: 1rem;
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 0.5rem;
+  word-break: break-word;
+}
+
+.button {
+  border-radius: 0;
+  font-family: $family-secondary;
+
+  &.is-smallish {
+    font-size: 0.9em;
+  }
+
+  &.is-cta {
+    text-transform: uppercase;
+    padding: 1.5em 1.25em;
+    letter-spacing: 0.15em;
+    font-size: 0.85em;
+  }
+}
+
+.tag {
+  font-family: $family-secondary;
+}
+
+.tags.has-addons {
+  .tag-addon {
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+.spacer {
+  margin-bottom: 0.75em;
+}
+
+.no-link-style {
+  color: inherit;
+}
+
+.has-text-secondary-lighter {
+  color: $secondary-light-text;
+}
+
+.has-background-secondary {
+  background-color: $secondary;
+}
+
+.has-background-teal {
+  background-color: nth($onn-blues, 2);
+}
+
+// autocompleter
+.autocomplete {
+  background-color: white;
+  border: 1px solid $text-light;
+}
+
+.autocomplete div {
+  padding: 0.2em 0.4em;
+  border-bottom: 1px solid $text-light;
+  font-size: 0.9em;
+}
+
+.autocomplete div.selected {
+  background-color: lighten($secondary, 42%);
+}
+
+html {
+  scroll-behavior: smooth;
+  max-width: 100%;
+}
+
+body {
+  // background: transparent
+  //   linear-gradient(180deg, #33f7f700 0%, #f7f7f7 40%, #f7f7f7 100%) 0% 0%
+  //   no-repeat padding-box;
+  background: $light;
+  color: $text;
+
+  @media print {
+    font: 12pt Georgia, "Times New Roman", Times, serif !important;
+    line-height: 1.3 !important;
+  }
+}
+
+html,
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}

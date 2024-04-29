@@ -1,0 +1,81 @@
+@import "@/styles/base-imports";
+@import "@/styles/indent.scss";
+@import "@/styles/bulletList.scss";
+@import "@/styles/table.scss";
+@import "@/styles/footnote.scss";
+@import "@/styles/blockquote.scss";
+@import "@/styles/customImage.scss";
+
+.pageContainer {
+  @include tablet {
+    margin-top: 4rem;
+  }
+}
+
+.container {
+  margin: 1rem;
+  @include indentStyles;
+  @include bulletList;
+  @include table;
+  @include footnote;
+  @include blockquote;
+  @include customImage;
+}
+
+.sidebar {
+  @media print {
+    display: none;
+  }
+}
+
+.contentContainer {
+  display: grid;
+  grid-template-columns: minmax(0, 12fr);
+  gap: 2rem;
+
+  @include tablet {
+    grid-template-columns: 1fr minmax(0, 11fr);
+  }
+
+  @media print {
+    display: block;
+  }
+}
+
+.categoryIntroContainer {
+  p {
+    max-width: 60ch;
+  }
+}
+
+.articleContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+
+  @media print {
+    display: block;
+  }
+}
+
+.returnLink {
+  a {
+    cursor: pointer;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: $primary;
+    font-weight: bold;
+    display: flex;
+    gap: 2rem;
+    font-size: 1.3rem;
+    align-items: center;
+
+    @include tablet {
+      display: none;
+    }
+  }
+}
+
+.loadingSpinner {
+  min-height: 20rem;
+}

@@ -1,0 +1,59 @@
+@import '@/styles/base-imports';
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  overflow-x: auto;
+  padding: 0.4rem 0.1rem;
+
+  @media print {
+    display: none;
+  }
+
+  @include desktop {
+    flex-direction: column;
+    overflow: unset;
+  }
+}
+
+.sidebarItem {
+  border-radius: 8px;
+  background: $offwhite;
+  padding: 1rem 2rem;
+  box-shadow: 0px 3px 6px #00000029;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover,
+  &.active {
+    outline: 1px solid #00baff;
+    background-color: #ecf4f7;
+  }
+
+  :global {
+    .icon-text span {
+      user-select: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  @include desktop {
+    width: 100%;
+    padding: 1rem 2rem 1rem 1rem;
+    align-items: flex-start;
+
+    :global {
+      .icon-text span {
+        flex-direction: row;
+        justify-content: flex-start;
+      }
+    }
+  }
+}

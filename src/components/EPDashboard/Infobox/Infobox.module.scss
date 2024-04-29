@@ -1,0 +1,15 @@
+.infobox {
+  border: 1px dashed;
+  padding: 2em 1em;
+  font-weight: bold;
+
+  &.warn {
+    background-color: lightsalmon;
+    color: red;
+  }
+
+  &.info {
+    background-color: lightblue;
+    color: lightseagreen;
+  }
+}

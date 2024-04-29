@@ -1,0 +1,32 @@
+@import "@/styles/base-imports.scss";
+
+.footer {
+  background-image: url(https://opennuclear.org/themes/custom/oef/images/cta_texture.svg);
+  background-color: $info;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 20%;
+
+  padding-top: 2.5em;
+  padding-bottom: 1.5em;
+}
+
+.col {
+  padding: 1.5em 0;
+  font-size: 1.25em;
+  line-height: 1.4em;
+  font-family: $family-secondary;
+  font-weight: 600;
+
+  &:not(:first-child) {
+    color: $dark;
+  }
+
+  &:first-child {
+    color: white;
+  }
+
+  a {
+    color: $primary;
+  }
+}

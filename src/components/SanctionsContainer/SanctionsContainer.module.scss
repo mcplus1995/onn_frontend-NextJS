@@ -1,0 +1,37 @@
+@import "@/styles/base-imports";
+
+.container {
+  margin-inline: 1rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+
+  @include widescreen {
+    flex: 1 !important;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  &::after {
+    position: fixed;
+    content: "";
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 15;
+    opacity: 0;
+    transition: opacity 0.5s;
+    transition-delay: 0.1s;
+    pointer-events: none;
+  }
+
+  &.readingPaneActive::after {
+    opacity: 1;
+    transition-delay: 0;
+    pointer-events: all;
+  }
+}

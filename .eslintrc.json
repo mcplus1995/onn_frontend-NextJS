@@ -1,0 +1,6 @@
+{
+  "extends": ["next/core-web-vitals"],
+  "rules": {
+    "eslintreact-hooks/rules-of-hooks": "off"
+  }
+}

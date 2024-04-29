@@ -1,0 +1,35 @@
+@import "@/styles/base-imports";
+
+.separator {
+    display: inline-block;
+    border-top: 8px solid lighten(black, 30%);
+    margin: 3em 0;
+    width: 90%;
+    max-width: 37.5em;
+}
+
+.sanctionsContainer {
+    flex-direction: column;
+    padding: 3rem 0;
+
+    @include widescreen {
+        flex-direction: row;
+        align-items: flex-start;
+        margin: auto;
+    }
+}
+
+.button {
+    border-radius: 8px;
+    padding-block: 1.5rem;
+    padding-inline: 2rem;
+    background-color: $primary;
+    color: $offwhite;
+    letter-spacing: 1.6px;
+    font-family: $family-secondary;
+    text-transform: uppercase;
+
+    &:hover {
+        color: $offwhite;
+    }
+}

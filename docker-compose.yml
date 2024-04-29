@@ -1,0 +1,11 @@
+version: "3"
+services:
+  next:
+    container_name: next
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3003:3003
+    restart: unless-stopped
+

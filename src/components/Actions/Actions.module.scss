@@ -1,0 +1,7 @@
+@import "@/styles/base-imports";
+
+.container {
+  @media print {
+    display: none;
+  }
+}

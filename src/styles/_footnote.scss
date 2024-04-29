@@ -1,0 +1,29 @@
+@mixin footnote {
+  :global {
+    .footnote {
+      font-size: 16px;
+      .dropdown-trigger {
+        font-size: 0.8em;
+        font-weight: bold;
+        color: $link;
+        cursor: default;
+        margin-right: 0.3em;
+        padding-inline: 0.3rem;
+      }
+
+      .dropdown-menu {
+        padding: 0.75em 1em;
+        background-color: $secondary-light;
+        color: $secondary-light-text;
+        max-width: inherit;
+      }
+    }
+
+    .footnote-editor {
+      padding: 0.2rem 0.5rem;
+      color: $primary;
+      font-weight: bold;
+      vertical-align: super;
+    }
+  }
+}

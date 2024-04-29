@@ -1,0 +1,26 @@
+@import "@/styles/base-imports";
+
+.container {
+    padding: 0.5rem 2.5rem;
+    background: #fdfdfd 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 8px rgb(98 98 98 / 16%);
+    border-radius: 5px;
+    margin: 0 2rem;
+    margin-inline: 1rem;
+
+    width: 100%;
+    max-width: none;
+
+
+    @include widescreen {
+        padding: 0.5rem 2.5rem;
+        align-self: flex-start;
+        -webkit-position: sticky;
+        position: sticky;
+        top: 8rem;
+        bottom: 2rem;
+        max-width: 30%;
+        max-height: calc(100dvh - 8rem - 2rem);
+        overflow-y: auto;
+    }
+}

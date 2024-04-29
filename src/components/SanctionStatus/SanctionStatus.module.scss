@@ -1,0 +1,31 @@
+@import "@/styles/base-imports";
+
+.container {
+  margin-left: 1.7rem;
+  padding: .25rem 1.25rem;
+  border-radius: 1rem;
+  color: #fff;
+  max-width: fit-content;
+
+  &.slim {
+    margin: 0;
+  }
+
+  &.in-force {
+    background-color: nth($onn-blues, 1);
+  }
+
+  &.not-in-force {
+    background-color: grey;
+  }
+
+  .statusMain {
+    font-weight: 700;
+    margin-right: .5rem;
+  }
+
+  .statusAddon {
+    font-weight: 100;
+    font-family: $family-secondary;
+  }
+}

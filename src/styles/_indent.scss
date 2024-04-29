@@ -1,0 +1,9 @@
+// Styles for the indentation function
+@mixin indentStyles {
+  @for $i from 1 through 8 {
+    [data-indent="#{$i}"] {
+      $val: $i * 3rem;
+      margin-left: $val;
+    }
+  }
+}

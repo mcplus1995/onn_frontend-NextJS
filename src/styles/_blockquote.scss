@@ -1,0 +1,12 @@
+@mixin blockquote {
+  :global {
+    blockquote {
+      font: 1rem/1.5rem normal, Helvetica, sans-serif;
+      font-style: italic;
+      margin-block: 2rem;
+      margin-left: 3px;
+      padding-left: 15px;
+      border-left: 3px solid #ccc;
+    }
+  }
+}

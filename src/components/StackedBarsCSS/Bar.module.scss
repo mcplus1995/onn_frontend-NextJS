@@ -1,0 +1,27 @@
+.chart {
+  overflow: hidden;
+  width: 0%;
+  animation: expand 1.5s ease forwards;
+  display: flex;
+
+  @media print {
+    width: 100%;
+    animation: none;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  &>* {
+    flex: 1;
+  }
+}
+
+@keyframes expand {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}

@@ -1,0 +1,79 @@
+@import '@/styles/base-imports';
+
+.contentContainer {
+    padding-inline: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    @include desktop {
+        grid-template-columns: 200px 1fr 125px;
+        padding-inline: 4rem;
+        gap: 4rem;
+    }
+
+}
+
+.sidebar {
+    width: 100%;
+    overflow-x: auto;
+
+}
+
+.content {}
+
+.introContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+
+    @include desktop {
+        flex-direction: row;
+        gap: 4rem;
+
+        &>* {
+            flex: 1 0 50%
+        }
+    }
+}
+
+.searchBarContainer {
+    @media print {
+        display: none;
+    }
+}
+
+.xplainer {}
+
+.outroContainer {
+    display: flex;
+    gap: 4rem;
+    margin-top: 6rem;
+    margin-bottom: 8rem;
+    flex-direction: column-reverse;
+
+    @include desktop {
+        flex-direction: row;
+    }
+
+    @media print {
+        margin: 10px auto 0 auto;
+        display: inline-block;
+    }
+
+    .button {
+        border-radius: 8px;
+        padding-block: 1.5rem;
+        padding-inline: 2rem;
+        background-color: $primary;
+        color: $offwhite;
+        letter-spacing: 1.6px;
+        font-family: $family-secondary;
+        text-transform: uppercase;
+
+        @media print {
+            display: none;
+        }
+    }
+}

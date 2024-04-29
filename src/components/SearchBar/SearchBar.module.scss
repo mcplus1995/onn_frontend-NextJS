@@ -1,0 +1,27 @@
+@import "@/styles/base-imports.scss";
+
+.container {
+  width: 100%;
+  margin-bottom: 3rem;
+
+  @media print {
+    display: none;
+  }
+
+  .control {
+    width: 100%;
+  }
+
+  .input {
+    border-radius: 8px;
+    padding-block: 1.5rem;
+  }
+
+  .button {
+    padding-block: 1.5rem;
+    padding-inline: 2rem;
+    background-color: $primary;
+    color: $offwhite;
+    text-transform: uppercase;
+  }
+}

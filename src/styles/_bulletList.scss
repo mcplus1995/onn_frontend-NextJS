@@ -1,0 +1,40 @@
+@mixin bulletList {
+  :global {
+    .showBullets {
+      display: block;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 40px;
+    }
+
+    ul.showBullets {
+      list-style-type: disc;
+      & > li > ul,
+      & > li[data-indent] {
+        margin-top: 0.3em;
+        margin-bottom: 0.3em;
+        list-style-type: circle;
+
+        &[data-indent="2"],
+        &[data-indent="4"] {
+          list-style-type: disc;
+        }
+      }
+    }
+
+    ol.showBullets {
+      list-style-type: decimal;
+      & > li[data-indent] {
+        margin-top: 0.3em;
+        margin-bottom: 0.3em;
+        list-style-type: lower-alpha;
+        &[data-indent="1"],
+        &[data-indent="3"] {
+          list-style-type: lower-roman;
+        }
+      }
+    }
+  }
+}

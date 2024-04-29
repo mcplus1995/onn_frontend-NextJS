@@ -1,0 +1,19 @@
+.container {
+    --dimensions: 1.9rem;
+    display: inline;
+    padding-inline: .25rem;
+    width: var(--dimensions);
+    aspect-ratio: 1;
+    overflow: hidden;
+    text-align: center;
+    line-height: var(--dimensions);
+    font-size: var(--dimensions);
+}
+
+.large {
+    --dimensions: 2.5rem;
+}
+
+.xlarge {
+    --dimensions: 3.5rem;
+}

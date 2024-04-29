@@ -1,0 +1,13 @@
+@import "@/styles/base-imports";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 4rem auto;
+  align-items: center;
+
+  .headline {
+    font-family: $family-primary;
+    margin-top: 4rem;
+  }
+}

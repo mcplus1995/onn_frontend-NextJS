@@ -1,0 +1,105 @@
+@import '@/styles/base-imports';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-block: 2rem;
+    margin-inline: 1rem;
+    min-height: 500px;
+
+    @include tablet {
+        min-width: 250px;
+        flex-direction: row-reverse;
+        gap: 6rem;
+        justify-content: flex-end;
+    }
+
+    @include desktop {
+        min-width: 350px;
+    }
+
+    .categoryIntroContainer {
+        p {
+            max-width: 60ch;
+        }
+    }
+
+    .categoryArticlesContainer {
+        @include tablet {
+            width: 350px;
+        }
+
+        @include desktop {
+            // flex-shrink: 0;
+        }
+    }
+}
+
+.sortByContainer {
+    position: relative;
+
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    //   width: clamp(120px, 100%, 180px);
+    width: 100%;
+}
+
+.handle {
+    margin-block: 2rem;
+    padding: 0.5rem;
+    width: 100%;
+    z-index: 998;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+
+    &.open {
+        background: $offwhite;
+        box-shadow: 0px 3px 6px #00000029;
+    }
+
+    .handleIcon {
+        width: 1rem;
+    }
+}
+
+.sortOptions {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    translate: 0 100%;
+    padding: 0.5rem 0;
+
+    background: $offwhite;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    width: 100%;
+    min-height: 50px;
+    z-index: 999;
+    box-shadow: 0px 3px 6px #00000029;
+
+    &.open {
+        display: block;
+    }
+
+    li {
+        text-align: left;
+        white-space: nowrap;
+        padding: 0.15rem 1rem;
+        text-transform: capitalize;
+
+        &:hover {
+            background-color: lighten($primary, 60%);
+            color: $text;
+        }
+
+        &.active {
+            font-weight: bold;
+        }
+    }
+}

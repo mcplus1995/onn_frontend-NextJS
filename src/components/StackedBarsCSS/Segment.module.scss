@@ -1,0 +1,23 @@
+.block {
+  display: block;
+  height: 20px;
+  color: #fff;
+  font-size: 0.75em;
+  float: left;
+  background-color: #334d5c;
+  position: relative;
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity, 0.3s ease;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+
+  @media print {
+    transition: none;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}

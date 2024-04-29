@@ -1,0 +1,13 @@
+.container {
+  width: 100vw;
+
+  @media print {
+    display: none;
+  }
+}
+
+.header {
+  @media print {
+    display: none;
+  }
+}

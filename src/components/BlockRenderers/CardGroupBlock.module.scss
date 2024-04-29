@@ -1,0 +1,31 @@
+@import "@/styles/base-imports";
+
+.container {
+    margin-top: 4rem;
+}
+
+.headline {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+.content {
+    font-family: $family-primary;
+}
+
+
+.cardContainer {
+    padding-block: 4rem;
+    max-width: 1344px;
+    margin: auto;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    justify-items: stretch;
+    align-items: stretch;
+
+    @include desktop {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

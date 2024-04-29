@@ -1,0 +1,42 @@
+@import "@/styles/base-imports";
+
+.container {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background: #fdfdfd;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 10px;
+    padding: 2rem 2rem;
+
+    .cardIconContainer {
+        --dimensions: 2rem;
+        position: relative;
+        width: var(--dimensions);
+        aspect-ratio: 1;
+        align-self: center;
+    }
+
+    .cardTitle {
+        font-size: 1.9rem;
+        color: $primary;
+    }
+
+    .cardDescription {
+        font-family: $family-primary;
+        font-size: 0.9rem;
+        margin-top: auto;
+    }
+
+    .cardLink {
+        align-self: flex-end;
+        font-weight: 400;
+        color: #00BAFF;
+        letter-spacing: 1.76px;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        margin-top: auto;
+    }
+}

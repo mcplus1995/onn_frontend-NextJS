@@ -1,0 +1,147 @@
+@import "@/styles/base-imports.scss";
+@import "~bulma/sass/components/navbar.sass";
+
+.container {
+  width: 100%;
+  background: #fdfdfd 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+}
+
+.navCTA {
+  @include desktop {
+    color: $secondary !important;
+
+    &:hover {
+      &::after {
+        display: none !important;
+      }
+
+      span {
+        background: $secondary;
+        color: #fff;
+      }
+    }
+
+    span {
+      outline: 1px solid $secondary;
+      border-radius: 8px;
+      padding: 0.5rem 1rem;
+    }
+  }
+}
+
+.navbar {
+  @media print {
+    box-shadow: none;
+    background: transparent;
+    position: absolute !important;
+    display: none;
+  }
+
+  .burgerContainer {
+    min-height: $fixed-nav-size;
+  }
+
+  .logo {
+    max-height: $fixed-nav-size;
+    max-width: 200px;
+    margin-left: 2rem;
+  }
+
+  :global {
+    .navbar-end {
+      padding-right: 2rem;
+    }
+
+    .navbar-menu {
+      .navbar-item {
+        font-size: 15px;
+        line-height: 22px;
+        letter-spacing: 1.8px;
+        font-weight: 500;
+
+        text-transform: uppercase;
+        color: $primary;
+
+        font-family: $family-secondary;
+
+        @include desktop {
+          margin-left: 0.5em;
+          position: relative;
+
+          &:hover .navbar-submenu {
+            display: block;
+          }
+
+          &:hover::after,
+          &.is-active::after {
+            /* Bulma default is 0.75rem per side. 0.5rem added to it for visual tweaking results in 1.25rem */
+            $internalPadding: 0.75rem;
+            content: "";
+            display: block;
+            width: calc(100% - 2 * $internalPadding);
+            height: 2px;
+            background-color: $secondary;
+            position: absolute;
+            bottom: 15%;
+            left: $internalPadding;
+          }
+        }
+
+        .navbar-submenu {
+          z-index: 100;
+
+          @include desktop {
+            display: none; // Hide by default
+            background-color: #fff;
+            box-shadow: 0px 3px 6px #00000029;
+            position: absolute;
+            left: 100%;
+            top: 0;
+          }
+
+          .navbar-item {
+            padding: 0.5rem 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.navItemContainer {
+  display: grid;
+  place-content: center;
+
+  position: relative;
+
+  .subMenu {
+
+    padding-left: 1.25rem;
+    width: auto;
+
+    @include desktop {
+      display: none;
+      background: #fff;
+      box-shadow: 0px 3px 6px #00000029;
+      position: absolute;
+      right: 0;
+      top: 100%;
+      width: max-content;
+
+      :global {
+        .navbar-item {
+          justify-content: flex-end;
+        }
+      }
+
+
+      &.isActive {
+        display: block;
+        z-index: 10;
+      }
+    }
+
+
+  }
+}

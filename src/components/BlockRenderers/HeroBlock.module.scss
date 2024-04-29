@@ -1,0 +1,38 @@
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100dvh;
+    max-height: 33svh;
+    overflow: hidden;
+
+    .overlayContainer {
+        position: relative;
+        display: grid;
+        place-content: center;
+        height: 100%;
+        color: #fff;
+
+        * {
+            color: inherit;
+            z-index: 10;
+            position: relative;
+        }
+
+        h1 {
+            position: relative;
+            z-index: 10;
+
+            .onn {
+                position: relative;
+            }
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: var(--overlay-color)
+    }
+
+}

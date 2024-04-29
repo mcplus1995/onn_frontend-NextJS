@@ -1,0 +1,93 @@
+@mixin customImage {
+  :global {
+    .custom-image {
+      height: auto;
+
+      &.image-default {
+        max-width: auto;
+        min-width: auto;
+      }
+
+      &.image-small {
+        max-width: 25%;
+        min-width: 25%;
+      }
+
+      &.image-medium {
+        max-width: 50%;
+        min-width: 50%;
+      }
+
+      &.image-large {
+        max-width: 100%;
+        min-width: 100%;
+      }
+
+      &.float-left {
+        float: left;
+      }
+
+      &.float-right {
+        float: right;
+      }
+
+      &.float-none {
+        float: none;
+      }
+    }
+
+    .image-resizer,
+    .fe-image {
+      position: relative;
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.5rem;
+
+      &.active {
+        outline: 2px dashed lightgrey;
+
+        .resize-trigger {
+          opacity: 1;
+        }
+      }
+
+      &.float-left {
+        float: left;
+      }
+
+      &.float-right {
+        float: right;
+      }
+
+      &.float-none {
+        float: none;
+      }
+
+      &.float-left,
+      &.float-right {
+        &::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+      }
+
+      .resize-trigger {
+        --size: 1.2rem;
+        position: absolute;
+        width: var(--size);
+        height: var(--size);
+        display: grid;
+        place-content: center;
+        right: 0;
+        bottom: 0;
+        translate: 50% 25%;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        color: #3259a5;
+        font-size: var(--size);
+        cursor: nwse-resize;
+      }
+    }
+  }
+}
